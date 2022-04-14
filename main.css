@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@300;500;700;900&display=swap');
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+
+
+
+body {
+    background-color: var(--Paleblue);
+    z-index: -99;
+}
+
+.background {
+    background: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-y: -50%;
+    min-height: 100vh;
+    
+
+}
+
+.background,
+.card,
+.card > div:not(.med) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card > div:not(.image),
+.sys > div  {
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: #fff;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px  var(--Paleblue);
+}
+.image img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.disc{
+    width: 80%;
+    flex-direction: column;
+}
+
+.disc h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+
+}
+
+.disc p {
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 50%;
+}
+
+.med {
+    background-color: var(--Verypaleblue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.med .musique {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.med .musique .salary span {
+    display: block;
+    opacity: 50%;
+    font-size: 14px;
+}
+
+.musique img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.salary p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.med a {
+    font-size: 14px;
+}
+
+.sys,
+.sys .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sys {
+    width: 100%;
+    flex-direction: column;
+}
+
+.sys .button {
+    width: 80%;
+    height: 35px;
+    background-color: var(--Brightblue);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 15px 15px 2px var(--Paleblue);
+    transition: opacity 0.5s;
+}
+
+.sys .cancel {
+    font-size: 12px;
+    font-weight: 900;
+
+}
+
+.sys:hover > div {
+    cursor: pointer;
+}
+
+.sys:hover .button{
+    opacity: 70%;
+    
+}
+
+.med:hover a{
+    color: var(--Brightblue);
+    text-decoration: none;
+}
+
+@media (max-width:375px) {
+
+    .background {
+        background: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    
+
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .disc {
+        font-size: 16px;
+    }
+
+    .musique img {
+        width: 40px;
+        height: 40px;
+    }
+    
+}
